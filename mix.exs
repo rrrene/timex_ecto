@@ -3,7 +3,7 @@ defmodule TimexEcto.Mixfile do
 
   def project do
     [app: :timex_ecto,
-     version: "0.4.0",
+     version: "0.5.0-dev",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -29,10 +29,12 @@ defmodule TimexEcto.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:timex, "~> 0.16.0"},
-     {:ecto, "~> 1.0"},
-     {:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.5", only: :dev}]
+    [
+      {:timex, github: "rrrene/timex"},
+      {:ecto, "~> 1.0"},
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.5", only: :dev}
+    ]
   end
 
   defp package do
