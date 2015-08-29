@@ -44,3 +44,6 @@ defmodule Timex.Ecto.DateTime do
   def dump(_), do: :error
 end
 
+defmodule Timex.DateTime do
+  def type, do: :datetime
+end
